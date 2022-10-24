@@ -1,0 +1,19 @@
+{
+  "name": "wardtoulet.dev",
+  "version": "0.0.1",
+  "description": "My persional website",
+  "main": "index.js",
+  "repository": "https://github.com/WardToulet/wardtoulet.dev",
+  "author": "Ward Toulet <ward@toulet.net>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "packageManager": "yarn@3.2.4",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0"
+  }
+}

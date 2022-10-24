@@ -1,0 +1,124 @@
+@import "./open-props.css";
+@import "./normalize.css";
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-fluid-2);
+
+  max-inline-size: var(--size-content-3);
+  padding: var(--size-fluid-4);
+  margin-inline: auto;
+}
+
+header {
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-fluid-4);
+}
+h1 {
+  font-size: var(--font-size-fluid-2);
+  font-weight: var(--font-weight-6);
+  color: var(--text-1);
+  text-transform: capitalize;
+  font-family: var(--font-mono);
+
+  color: transparent;
+  background: var(--gradient-4);
+  background-clip: text;
+}
+
+article  {
+  max-inline-size: var(--size-content-3);
+}
+
+#about {
+  display: grid;
+  grid-template-areas: 'profile' 'title' 'content';
+}
+
+#profile {
+  grid-area: profile;
+}
+
+#profile > img {
+  border-radius: var(--radius-blob-4);
+  animation: wobble 60s alternate infinite;
+
+  max-inline-size: var(--size-fluid-8);
+  box-shadow: var(--shadow-2);
+
+  margin-inline: auto;
+}
+
+#profile > ul {
+  list-style: none;
+  padding-inline: 0;
+  padding-block: var(--size-fluid-1);
+  font-size: var(--font-size-0);
+  gap: var(--size-fluid-2);
+
+  display: flex;
+  justify-content: center;
+}
+
+#profile > ul > li {
+  padding: 0;
+}
+
+#profile > ul > li > a {
+  display: flex;
+  padding-block: auto;
+  gap: var(--size-1);
+}
+
+#profile > ul > li > a > img{
+  display: inline;
+  max-block-size: var(--size-4);
+}
+
+/** About section **/
+/* .about { */
+/*   display: grid; */
+/*   grid-template-areas: 'image' 'title' 'content'; */
+/*   grid-template-columns: 1fr; */
+/* } */
+/**/
+/* .about h1 { */
+/*   grid-area: 'title'; */
+/* } */
+/**/
+/**/
+/* .about > article { */
+/*   grid-area: content; */
+/* } */
+/**/
+/**/
+/* @media(width > 768px) { */
+/*   .about { */
+/*     grid-template-areas: 'image title' 'image content'; */
+/*     grid-template-columns: auto var(--size-content-3); */
+/*     grid-template-rows: auto 1fr; */
+/*   } */
+/**/
+/*   .about > img { */
+/*     margin-inline-end: var(--size-fluid-4); */
+/*     margin-block: auto; */
+/*   } */
+/* } */
+/**/
+
+@keyframes wobble {
+  0% {
+    border-radius: var(--radius-blob-1)
+  }
+  50% {
+    border-radius: var(--radius-blob-2)
+  }
+  100% {
+    border-radius: var(--radius-blob-3)
+  }
+}
